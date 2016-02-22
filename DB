@@ -1,0 +1,97 @@
++---------------------+
+| Tables_in_13104448d |
++---------------------+
+| Admin               |
+| Attendee            |
+| Banquet             |
+| Dish                |
+| Drink               |
+| Meal_Plan           |
+| Record              |
+| TableSet            |
++---------------------+
+
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| Admin_ID       | varchar(255) | NO   | PRI | NULL    |       |
+| Admin_Password | char(32)     | NO   |     | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+
++-------------------------+--------------+------+-----+---------+-------+
+| Field                   | Type         | Null | Key | Default | Extra |
++-------------------------+--------------+------+-----+---------+-------+
+| Attendee_ID             | int(11)      | NO   | PRI | NULL    |       |
+| Attendee_Name           | varchar(255) | NO   |     | NULL    |       |
+| Attendee_Address        | varchar(255) | NO   |     | NULL    |       |
+| Attendee_PhoneNum       | char(8)      | NO   |     | NULL    |       |
+| Attendee_Email          | varchar(50)  | NO   |     | NULL    |       |
+| Attendee_AffilicatedOrg | varchar(50)  | NO   |     | NULL    |       |
+| Attendee_Type           | varchar(50)  | NO   |     | NULL    |       |
+| Attendee_Account        | varchar(50)  | NO   |     | NULL    |       |
+| Attendee_Password       | varchar(50)  | NO   |     | NULL    |       |
++-------------------------+--------------+------+-----+---------+-------+
+
++-----------------------+--------------+------+-----+-------------------+-------+
+| Field                 | Type         | Null | Key | Default           | Extra |
++-----------------------+--------------+------+-----+-------------------+-------+
+| Banquet_ID            | int(11)      | NO   | PRI | NULL              |       |
+| Banquet_Name          | varchar(255) | NO   |     | NULL              |       |
+| Banquet_Date          | timestamp    | NO   |     | CURRENT_TIMESTAMP |       |
+| Banquet_Address       | text         | NO   |     | NULL              |       |
+| Banquet_Location      | text         | NO   |     | NULL              |       |
+| Banquet_Contact_Fname | varchar(255) | NO   |     | NULL              |       |
+| Banquet_Contact_Lname | varchar(255) | NO   |     | NULL              |       |
+| Banquet_Status        | varchar(255) | NO   |     | NULL              |       |
+| Banquet_Cap           | int(11)      | NO   |     | NULL              |       |
++-----------------------+--------------+------+-----+-------------------+-------+
+
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| Dish_ID      | int(11)     | NO   | PRI | NULL    |       |
+| Dish_Name    | varchar(50) | NO   |     | NULL    |       |
+| Dish_Descrip | text        | NO   |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Drink_ID      | int(11)     | NO   | PRI | NULL    |       |
+| Drink_Name    | varchar(50) | NO   |     | NULL    |       |
+| Drink_Descrip | text        | NO   |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+
++--------------+---------+------+-----+---------+-------+
+| Field        | Type    | Null | Key | Default | Extra |
++--------------+---------+------+-----+---------+-------+
+| Meal_Plan_ID | int(11) | NO   | PRI | NULL    |       |
+| Dish_ID      | int(11) | NO   | MUL | NULL    |       |
+| Banquet_ID   | int(11) | NO   | MUL | NULL    |       |
++--------------+---------+------+-----+---------+-------+
+
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| Record_ID        | int(11)     | NO   | PRI | NULL    | auto_increment       |
+| Record_Remarks   | text        | YES  |     | NULL    |       |
+| Record_Payment   | varchar(50) | NO   |     | NULL    |       |
+| Attendee_ID      | int(11)     | NO   | MUL | NULL    |       |
+| Drink_ID         | int(11)     | NO   | MUL | NULL    |       |
+| Dish_ID          | int(11)     | NO   | MUL | NULL    |       |
+| Banquet_ID       | int(11)     | NO   | MUL | NULL    |       |
+| Record_Seatnum   | int(11)     | NO   |     | NULL    |       |
+| Record_Table     | int(11)     | NO   |     | NULL    |       |
+| Record_VIPRemark | text        | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| Table_ID   | int(11)      | NO   | PRI | NULL    | auto_increment      |
+| Table_Type | varchar(255) | NO   |     | NULL    |       |
+| Table_User | char(50)     | NO   |     | NULL    |       |
+| Table_Cap  | int(11)      | NO   |     | NULL    |       |
+| Banquet_ID | int(11)      | NO   | MUL | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+

@@ -1,0 +1,65 @@
+{
+    "ace": {
+        "@guessTabSize": "true",
+        "@newLineMode": "unix",
+        "@tabSize": "4",
+        "@useSoftTabs": "true"
+    },
+    "build": {
+        "@builder": "auto",
+        "@path": "/.c9/builders",
+        "@saveall": true
+    },
+    "find.nak": {
+        "@searchLimit": 100
+    },
+    "general": {
+        "@stripws": false
+    },
+    "language": {
+        "@eslintrc": "true",
+        "@instanceHighlight": "true",
+        "@semi": "true",
+        "@undeclaredVars": "true",
+        "@unusedFunctionArgs": "false",
+        "@warnLevel": "info"
+    },
+    "python": {
+        "@path": "/usr/local/lib/python2.7/dist-packages:/usr/local/lib/python3.4/dist-packages:/usr/local/lib/python3.5/dist-packages",
+        "@version": "python2"
+    },
+    "run": {
+        "@path": "/.c9/runners",
+        "configs": {
+            "@inited": "true",
+            "json()": {
+                "Apache & PHP": {
+                    "command": "",
+                    "debug": true,
+                    "default": true,
+                    "name": "Apache & PHP",
+                    "runner": "Apache httpd (PHP, HTML)"
+                },
+                "PHP": {
+                    "command": "",
+                    "default": true,
+                    "name": "Apache & PHP",
+                    "runner": "Apache httpd (PHP, HTML)"
+                },
+                "server/login.php": {
+                    "command": "server/login.php",
+                    "debug": true,
+                    "default": true,
+                    "env": {},
+                    "name": "server/login.php",
+                    "runner": "Apache httpd (PHP, HTML)"
+                }
+            }
+        }
+    },
+    "share": {
+        "@app": false,
+        "@preview": false,
+        "@useOwnerSettings": false
+    }
+}
