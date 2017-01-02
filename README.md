@@ -1,18 +1,9 @@
 # Banquet_Mgt_System
 
-PolyU Fall Semester 2015
+A multi-functional Banquet Management System in PHP, HTML and MySQL
 
-COMP2411 Database System 
+Supervisor: Dr. Vincent Ng
 
-Lecturer: Dr. Vincent Hg Tutor: Memory
+Credit: Yuanjing Shi, Su Li, Tao Peng and Yunkun Chen
 
-Group:
-
-Yuanjing SHI-13104584d
-
-Su LI-13104448d
-
-Yunkun CHEN—13103214D 
-
-Tao PENG--13104616D 
 
